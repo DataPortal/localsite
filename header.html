@@ -1,108 +1,144 @@
+<style>
+/*
+Could use these state shapes: https://github.com/coryetzkorn/state-svg-defs
+*/
+</style>
+
 <div id="menuHolder" style="background:#333; display:none">
+
+	<!--
+	<div style="float:right;">
+	      <div class="expandToFullscreen" style="border:0px; padding: 10px; cursor: pointer; color:#ccc">
+	          <span style="font-size:34px;line-height:34px;padding-right:4px">&#10064;</span>
+	      </div>
+	      <div class="reduceFromFullscreen" style="display:none; border:0px; padding: 10px; cursor: pointer">
+	          <span style="font-size:33px;line-height:34px;padding-right:4px">&#10066;</span>
+	      </div>
+    </div>
+	-->
+
 	<div id="menuTop">
-		<div class="hideMenu"></div>
+		<div class="hideMenu"><span class="hideMenuInner" style="color:#aaa">✕</span></div>
 	</div>
+	<div style="clearX:both"></div>
+	
 	<div id="menuNav">
 
-		<div style="margin:6px 0 10px 40px"><b>ATLANTA</b></div>
+		<!-- Side Nav -->
 
-		<a href="atlanta/downtown/">Downtown South</a>
-		<a href="atlanta/hulsey/">Hulsey Yard</a>
-		<a href="atlanta/o4w">Old Fourth Ward</a>
-		<a href="atlanta/grantpark">Grant Park</a>
-		<a href="atlanta/midtown">Midtown</a>
-		<a href="atlanta/quarry-yards">Quarry Yards</a>
-		<hr style="border:1px solid #777; padding:0px">
-		<!--<div><a href="localsite.github.io/jewels">Y&rsquo;ALL Jewels</a></div>-->
-		<div><a href="localsite.github.io/mobile-storefronts">Mobile Storefronts</a></div>
-		<div><a href="localsite.github.io/micromobility">Micromobility</a></div>
+		<div class="neighborhood" style="display:none">
+			<a href="../"><b>Neighborhood</b></a>
+			<hr>
+		</div>
 
+		<div class="earth" style="display:none">
+			<a href="../community/tools"><b><span class="siteTitleShort"></span></b></a>
+		</div>
+		<div class="georgia" style="display:none">
+			<a href="../io/"><b><span class="siteTitleShort"></span></b></a>
+		</div>
+
+		<a href="../io/communities/">Communities</a>
+		<a href="../io/coders/">Coders & Designers</a>
+		<a href="../io/learn/">Teachers & Students</a>	
+		<a href="../community/">Volunteer Projects</a>
 		<!--
-		<div><a href="localsite.github.io/community">Model Builder</a></div>
+		<a href="../io/projects">Data Science</a>
 		-->
 
-		<div class="localonly" style="display:none">
-			<div><a href="localsite.github.io/materials">Building Materials</a></div>
-			<div><a href="localsite.github.io/memory/number-sounds">Memory Tricks</a></div>
+		<!--<a href="start/dataset">Goods & Services</a>-->
+		
+		<hr>
+		<a href="../community/challenge/"><b>Web Challenge</b></a>
+		<a href="../community/start/">Starter Samples</a>
+		<a href="../community/start/maps/">Map Samples</a>
+		<a href="../community/start/charts/">Chart Starters</a>
+		<!--
+		<a href="start/maps/counties/counties.html">Regions & Counties</a>
+		-->
+
+		<div class="earth" style="display:none">
+			<a href="../community/zip/leaflet/#columns=JobsAgriculture:50;JobsManufacturing:50">Industry Mix</a>
+		</div>
+		<hr>
+
+		<!--
+		<a href="https://github.com/modelearth/community" target="_parent"><b>Git Involved!</b></a> 
+		-->
+		<a href="../community/resources/input/" target="_parent">Send Input</a>
+
+	</div>
+</div>
+
+<div class="headerbar headerbarheight" style="background:#fff;width:100%;position:fixed;overflow:visible;z-index:1002;">
+
+	<div class="upperIcons noprint" style="float:right;">
+		<div class="showSearch local" style="display:none;float:left">
+			<!-- To do: use javascript to retain the current window.location.search value from URL when on a search page. -->
+			<div style="font-size:18pt;padding:2px 4px 0 2px;">&#128269;</div>
+		</div>
+
+		<div class="hideMobile" style="float:left;">
+		      <div class="expandToFullscreen" style="border:0px; padding: 3px 3px; cursor: pointer;">
+		          <span style="font-size:34px;line-height:34px;padding-right:4px; color:#777">&#10064;</span>
+		      </div>
+		      <div class="reduceFromFullscreen" style="display:none; border:0px; padding: 3px 3px; cursor: pointer">
+		          <span style="font-size:33px;line-height:34px;padding-right:4px; color:#777">&#10066;</span>
+		      </div>
+	    </div>
+
+		<!--
+		<div class="showApps local" style="display:none; float:left;">
+			<i class="material-icons" style="font-size:30px; color:#ccc; padding:5px 4px 4px 0px">&#xE5C3;</i>
+		</div>
+		-->
+
+		<div class="showMenu" style="float:left;font-size:24px; color:#999;">
+			<div style="font-size: 28px; color:#999; padding: 2px 6px 0 2px; margin-top:-5px">☰</div>
+		</div>
+	</div>
+
+	<div class="contentpadding" style="padding-top:0px">
+		<div id="logospace" class="headerbarheight">
+			<div id="logoholder">
+				
+				<div id="headerLogo">
+				</div>
+
+				<div id="headerLocTitleHolder">
+
+					<span id="headerSiteTitle"></span>
+					<div style="padding-top:8px; float:right; display:none" class="mock-up">
+						<div class="arrowdown"></div>
+					</div>
+					<div class="headerDropdown mock-up">
+						<span class='arrownext' style='margin:10px 10px 0 10px'></span>
+						
+
+					</div>
+					<a href="../community/tools" class="logolink">
+					<span id="headerLocTitle"></span>
+					</a>
+				</div>
+
+			</div>
+		</div>
+		
+		<div id="homeMenu" style="position:absolute">
+			<div>Georgia Communities</div>
+			<div>United States</div>
 		</div>
 
 		
-
 	</div>
 </div>
-
-<div style="height:80px;background:#fff;z-index:1;width:100%;position:fixed;overflow:hidden;z-index:1000;border-bottom:1px solid #eee">
-	
-	<div style="float:left"><a href="/"><img class="neighborhoodHeaderLogo" src="localsite/img/logo/neighborhood.png" /></a></div>
-
-	<div style="overflow:auto; border-left:0px solid #ccc; height:60px; margin:23px 40px 0 10px; padding-left:16px; font-size:13px">
-
-		<div class="showMenu" style="float:right; font-size:24px; color:#999; margin-right:4px">☰</div>
-
-		<div class="navLinks hideMobileWide" style="display:none; float:right;padding-top:6px">
-			<div style="float:left"><a href="downtown/">Atlanta</a></div>
-			<div style="float:left"><a href="hulsey/">Hulsey1</a></div>
-			<div style="float:left"><a href="o4w">o4w</a></div>
-			<div style="float:left"><a href="midtown">Midtown</a></div>
-			<div style="float:left"><a href="quarry-yards">Quarry</a></div>
-        </div>
-
-	</div>
-</div>
-
-<div style="display:none">
-	<div id="disqus_thread" style="padding:40px; max-width:1000px; margin: 0 auto;"></div>
-</div>
-
-
-<!--
-Stop fixed position at footer
-https://stackoverflow.com/questions/8653025/stop-fixed-position-at-footer
-
--->
-
-<div id="footerHolder" style="height:70px;">
-<div id="footer" class="footer-bottom">
-	<div style="float:right">
-		<a href="https://dreamstudio.com">DreamStudio</a>
-	</div>
-	<div style="float:left">
-		<a href="../localsite.github.io/about/policy">Privacy Policy</a> &nbsp; &nbsp;
-		<a href="../localsite.github.io/about/terms">Terms and Conditions</a>
-	</div>
-	
-</div>
-</div>
+<!-- Also update headerbar and headerOffset -->
+<div class="headerbarheight" style="height:100px;"></div>
 
 <script>
-
-//document.body.appendChild(document.getElementById('disqus_thread'));
-document.body.appendChild(document.getElementById('footerHolder'));
-
-//var html = '<div id="disqus_thread" style="padding:30px; max-width:1000px; margin: 0 auto;"></div>';
-//document.body.insertAdjacentHTML('beforeend', html);
+$(document).ready(function () {
+    $('.expandToFullscreen, .reduceFromFullscreen').click(function(event) {
+      toggleFullScreen();  
+    });
+});
 </script>
-
-<!--
-<script>
-/**
-*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-/*
-var disqus_config = function () {
-this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-};
-*/
-(function() { // DON'T EDIT BELOW THIS LINE
-var d = document, s = d.createElement('script');
-s.src = 'https://locally.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
--->
-
-
-                            
